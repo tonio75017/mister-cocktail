@@ -1,6 +1,11 @@
-<div class= "text_center">
-<h2><%= @cocktail.name %></h2>
-<%= link_to 'Back' cocktail_path %>
+<h1><%= @cocktail.name %></h1>
 
-
- </div>
+<ul>
+<% @cocktail.doses.each do |dose| %>
+  <li>
+    <%= dose.ingredient.name %> - <%= dose.description %>
+    <%= link_to "delete", dose_path(dose), method: :delete %>
+  </li>
+<% end %>
+</ul>
+<%= link_to 'Back', cocktails_path %>
