@@ -4,6 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
+gem 'rails_12factor', group: :production
+gem 'puma',           group: :production
+
+
+
+
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -26,6 +32,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -35,6 +45,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "better_errors"
+  gem "binding_of_caller"
+
 end
 
 group :development do
