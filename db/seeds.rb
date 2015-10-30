@@ -1,7 +1,7 @@
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "Bacardi")
 
+ingredients = %w(lemon ice mint leaves redbull jagermeister sugar tonic gin rhum)
+ingredients.each { |ingredient| Ingredient.create(name: ingredient) }
+cocktails.each { |cocktail| Cocktail.create(cocktail) }
 
 
 
